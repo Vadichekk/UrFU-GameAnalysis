@@ -44,16 +44,21 @@
 Я выбрал игру Warframe. В ней в основном PVE режимы. Warframe — условно-бесплатный кооперативный экшен с видом от третьего лица для четырех игроков. В команде друзей предстоит сразиться за невероятно опасную инопланетную расу Тенно (Tenno). Нужно проходить квесты, разнообразные задания как в одиночном режиме, так и в кооперативе на четверых человек. Игра представляет из себя постоянный фарм различных ресурсов для крафта новых варфреймов, оружия, компаньонов и многого другого.
 
 ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/1варф.jpeg)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/dragensang2.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/dragensang3.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/2варф.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/3варф.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/4варф.png)
 
-Существует  4 класса в игре, так как я играю за класс "Воин дракона", я расскажу о его расходуемом ресурсе ярость.
-Изначально уровень ярости равен 0, но если применить, например, зелье или элексир можно повысить в течение определённого времени уровень ярости. Также с помощью определённых приёмов и навыков можно повысить и понизить уровень ярости, но если не вступать в бой некоторое время уровень ярость будет сам по-тихоньку уменьшаться.
+В игре существует множество варфреймов, я расскажу о его расходуемом ресурсе энергия.
+Изначально колличество энергии зависит от выбраного варфрейма, а так же от модификаций этого варфрейма. Я выбрал варфрейма Висп, у меня в начале 150 энергии, но если собрать, например, сферу энергии, то она повышается на 25 единиц. Она расходуется на использование способностей варфрейма (они у всех варфреймов разные и стоимость использования тоже разная). Способности нужны для повышения силы, скорости передвижения, мгновенного урона и различных других механик игры.
 
 Посмотрим на схему:
-- У нас есть расходуемый ресурс, если мы применим, какой-то навык или прием, мы либо получим ярость, либо она уменьшится. Если мы захотим принять какое-то зелье или эликсир, нам будет добавлено определённое количество ярости
+- У нас есть расходуемый ресурс, если мы применим, какую-то способность, мы потратим какое-то кол-во энергии. Если мы захотим повысить кол-во энергии, нам нужно выбить сферу энергии с вражеского противника.
 
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/graphicEconomic.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/5варф.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/6варф.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/7варф.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/8варф.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/схема.png)
 
 ## Задание 2
 ### С помощью скрипта на языке Python заполнить google-таблицу данными, описывающими выбранную игровую переменную в выбранной игре и средствами google-sheets визуализировать данные в google-таблице (построить график, диаграмму и пр.) для наглядного представления выбранной игровой величины.  
