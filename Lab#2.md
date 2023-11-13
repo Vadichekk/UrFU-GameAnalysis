@@ -69,10 +69,10 @@
 import gspread
 import time
 import numpy as np
-gc = gspread.service_account(filename='marine-defender-400812-27518204a81b.json')
+gc = gspread.service_account(filename='unitydatasience1-6bc7a0f73e8d.json')
 sh = gc.open("UnityWorkshop2")
-l_skill = ["", "Яростный размах", "Яростный удар", "Размножение", "Воинственный прыжок", "Долговременный настой для ресурсов"]
-l_amount = [0,8,5,-20,-40,50]
+l_skill = ["", "Источники 1","Источники 2", "Источники 3", "Блуждающий огонек", "Всплеск пробоя", "Врата солнца"]
+l_amount = [25,25,25,50, 25, 100]
 time.sleep(3)
 rage = 0
 price = np.random.randint(1, 6, 11)
@@ -84,9 +84,9 @@ for i in price:
     
     if rage + l_amount[i] >= 0:
         rage += l_amount[i]
-        if rage > 100:
-            rage = 100
-        if rage == 100:
+        if rage > 300:
+            rage = 300
+        if rage == 300:
             sh.sheet1.update(('E' + str(c)), "2")
         else:
             sh.sheet1.update(('E' + str(c)), "1")
@@ -106,12 +106,13 @@ for i in price:
     
     print(tempInf)
     c += 1
+    
 ```
-https://docs.google.com/spreadsheets/d/1YWuTkVBU3NnKvJY9PU7YsUYYvI5cKGgb4yCWHUea9jc
+https://docs.google.com/spreadsheets/d/1Uvyy4eswiME31yU4pI0kL3c1mUNpog6fwocSV0HzHJY/edit#gid=0
 
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/google-table.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/таблица.png)
   
-Также на скриншоте можно увидеть график зависимости уровня ярости от количества применённых навыков, приёмов, эликсиров и зельей
+Также на скриншоте можно увидеть график зависимости энергии от затрачиваемости способности
 
 ## Задание 3
 ### Настроить на сцене Unity воспроизведение звуковых файлов, описывающих динамику изменения выбранной переменной.  
@@ -124,8 +125,8 @@ https://docs.google.com/spreadsheets/d/1YWuTkVBU3NnKvJY9PU7YsUYYvI5cKGgb4yCWHUea
 - Запустим наш проект и увидим в консоли, что все звуковые файлы воспроизводится в соответсвие с таблицей Google Sheets
   
 Также я переделал звуковые эффекты, они соответствуют значениям ниже.  
-0 - недостаточно ярости, 1 - ярости достаточно, 2 - ярость заполнена на максимум  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/correctlySound.png)
+0 - недостаточно энергии, 1 - достаточно энергии, 2 - энергия на максимум  
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/звуки.png)
 
 ## Выводы
 
