@@ -43,7 +43,7 @@
 
 Я выбрал игру Warframe. В ней в основном PVE режимы. Warframe — условно-бесплатный кооперативный экшен с видом от третьего лица для четырех игроков. В команде друзей предстоит сразиться за невероятно опасную инопланетную расу Тенно (Tenno). Нужно проходить квесты, разнообразные задания как в одиночном режиме, так и в кооперативе на четверых человек. Игра представляет из себя постоянный фарм различных ресурсов для крафта новых варфреймов, оружия, компаньонов и многого другого.
 
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/варф1.jpeg)
+![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/1варф.jpeg)
 ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/dragensang2.png)
 ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/dragensang3.png)
 
