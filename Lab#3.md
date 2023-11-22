@@ -51,7 +51,7 @@
 
 Ссылка на google таблицу
 - https://docs.google.com/spreadsheets/d/1C_p_t8DMI9ykfdXev4fG-m8zrgQDCjDDhfvX2aHFw9s/edit#gid=0
-![Image alt]()
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/lab3.1.png)
 
 ## Задание 2
 ### Создайте 10 сцен на Unity с изменяющимся уровнем сложности.
@@ -147,11 +147,11 @@ plt.show()
 [17.5, 1.0999999999999992, 19, 0.02800000000000001]
 [19.0, 0.9999999999999992, 20, 0.030000000000000013]
 ```
-![Image alt]()
-![Image alt]()
-![Image alt]()
-![Image alt]()
-![Image alt]()
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/lab3.2.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/lab3.3.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/lab3.4.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/lab3.5.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/lab3.6.png)
 
 ## Выводы
 
