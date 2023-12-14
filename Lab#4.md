@@ -101,7 +101,7 @@
 Необходимое число эпох обучения зависит от весов(weights) и смещения(bias). Более того также зависит от ошибки обучения, то есть мы должны подобрать такое число обучения, чтобы ошибка максимально минимизировалась,
 и персептрон заканчивал свое обучение.  
   
-Ссылка на таблицу   https://docs.google.com/spreadsheets/d/1NkxHI_CfUrCAs_nFhNSSOnMNH0bhel2zXnRblwwoRsY/edit#gid=0  
+Ссылка на таблицу   https://docs.google.com/spreadsheets/d/1fI6StwFGVV5s0ctBkTc1QOcliWYPwLA_4dNtYZ2K0-Y/edit#gid=0  
 ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
 Вывод:
 - TOTAL ERROR(XOR) среднее с каждой эпохой увеличивается, достигает максимальной ошибки обучения и не меняется
