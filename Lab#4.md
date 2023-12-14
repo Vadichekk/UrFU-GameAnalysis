@@ -118,7 +118,7 @@ https://docs.google.com/spreadsheets/d/1fI6StwFGVV5s0ctBkTc1QOcliWYPwLA_4dNtYZ2K
 ### Построить визуальную модель работы перцептрона на сцене Unity.  
   Тесты OR, AND, NAND проходят одинаково хорошо, приведены на gif ниже
   
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/gifOR-AND-NAND.gif)  
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/2023-12-14-23-42-37-_online-video-cutter.com_.gif)  
   
   Один из тестов XOR показан на следующей gif
   
