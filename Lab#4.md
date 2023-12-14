@@ -107,15 +107,15 @@ https://docs.google.com/spreadsheets/d/1fI6StwFGVV5s0ctBkTc1QOcliWYPwLA_4dNtYZ2K
 
 OR:
 
-![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лфб4ор.png)
 
 AND:
 
-![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лфб4анд.png)
 
 NAND:
 
-![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лфб4нанд.png)
 
 XOR:
 
