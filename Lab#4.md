@@ -49,8 +49,9 @@
 Ход работы:
 - Создадим пустой 3D проект на Unity и добавим туда пустой объект
 - Добавим к пустому объекту предложенный файл Perceptron.cs
-- Запустим проект на разных тренировочных данных, используя 8 эпох обучения, и сделаем выводы    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/empty_object.png)
+- Запустим проект на разных тренировочных данных, используя 8 эпох обучения, и сделаем выводы
+-   
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.2.png)
 
 Вывод OR:  
   - После тестов, сделал вывод, что 5 эпох для обучения персептрона вполне достаточно, но для уверенности можно использовать 6 эпох, чтобы он безошибочно выводил правильные результаты тестов. Ниже представлены скриншоты обучения персептрона на 1, 5 эпохах.  
@@ -115,10 +116,14 @@ https://docs.google.com/spreadsheets/d/1fI6StwFGVV5s0ctBkTc1QOcliWYPwLA_4dNtYZ2K
 
 ## Задание 3
 ### Построить визуальную модель работы перцептрона на сцене Unity.  
-  Тесты OR, AND, NAND проходят одинаково хорошо, поэтому всего одна gif для них
+  Тесты OR, AND, NAND проходят одинаково хорошо, приведены на gif ниже
+  
   ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/gifOR-AND-NAND.gif)  
-  Один из тестов XOR показан на второй gif  
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/gifXOR.gif)  
+  
+  Один из тестов XOR показан на следующей gif
+  
+  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/gifXOR.gif)
+  
   Как мы видим, если персептрон успешно проходит тест, то шарик и куб становятся зелёным цветом, и кубик разрушается. Если же
   тест провален, то шарик и кубик становятся просто красным цветом.  
   Вот такой код я дописал в файле Perceptron.cs  
