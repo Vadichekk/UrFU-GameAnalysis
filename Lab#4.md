@@ -105,6 +105,20 @@
 Ссылка на таблицу   
 https://docs.google.com/spreadsheets/d/1fI6StwFGVV5s0ctBkTc1QOcliWYPwLA_4dNtYZ2K0-Y/edit#gid=0  
 
+OR:
+
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
+
+AND:
+
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
+
+NAND:
+
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
+
+XOR:
+
 ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
 
 Вывод:
