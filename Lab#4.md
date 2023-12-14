@@ -118,69 +118,59 @@ https://docs.google.com/spreadsheets/d/1fI6StwFGVV5s0ctBkTc1QOcliWYPwLA_4dNtYZ2K
 ### Построить визуальную модель работы перцептрона на сцене Unity.  
   Тесты OR, AND, NAND проходят одинаково хорошо, приведены на gif ниже
   
-  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/2023-12-14-23-42-37-_online-video-cutter.com_.gif)  
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/1.gif)  
   
   Один из тестов XOR показан на следующей gif
   
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/gifXOR.gif)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/2.gif)
   
-  Как мы видим, если персептрон успешно проходит тест, то шарик и куб становятся зелёным цветом, и кубик разрушается. Если же
-  тест провален, то шарик и кубик становятся просто красным цветом.  
+  Как мы видим, если персептрон успешно проходит тест, то платформа становятся зелёным цветом. Если же тест провален, то платформа становятся просто красным цветом.  
   Вот такой код я дописал в файле Perceptron.cs  
   ```cs
-  private void OnCollisionEnter(Collision collision)
-	{	
-        var test = CalcOutput(0, 0);
-		if (test == 0 && collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere4")
-		{	
-			collision.gameObject.GetComponent<Renderer>().material.color = Color.green;
-			gameObject.GetComponent<Renderer>().material.color = Color.green;
-            Destroy(collision.gameObject,1);
-		}
-		else if(collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere4")
-		{
-            collision.gameObject.GetComponent<Renderer>().material.color = Color.red;
-            gameObject.GetComponent<Renderer>().material.color = Color.red;
-        };
-        test = CalcOutput(0,1);
-        if (test == 1 && collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere3")
+  	void Start () {
+		Train(10);
+		Debug.Log("Test 0 0: " + CalcOutput(0,0));
+		Debug.Log("Test 0 1: " + CalcOutput(0,1));
+		Debug.Log("Test 1 0: " + CalcOutput(1,0));
+		Debug.Log("Test 1 1: " + CalcOutput(1,1));	
+		if (CalcOutput(0, 0) == 0)
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = Color.green;
             gameObject.GetComponent<Renderer>().material.color = Color.green;
-            Destroy(collision.gameObject,1);
         }
-        else if (collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere3")
+        else
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = Color.red;
             gameObject.GetComponent<Renderer>().material.color = Color.red;
-        };
-        test = CalcOutput(1, 0);
-        if (test == 1 && collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere2")
+        }
+
+        if (CalcOutput(0, 1) == 1)
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = Color.green;
             gameObject.GetComponent<Renderer>().material.color = Color.green;
-            Destroy(collision.gameObject,1);
         }
-        else if (collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere2")
+        else
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = Color.red;
             gameObject.GetComponent<Renderer>().material.color = Color.red;
-        };
-        test = CalcOutput(1, 1);
-        if (test == 0 && collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere1")
+        }
+
+
+        if (CalcOutput(1, 0) == 1)
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = Color.green;
             gameObject.GetComponent<Renderer>().material.color = Color.green;
-            Destroy(collision.gameObject,1);
         }
-        else if (collision.gameObject.tag != "Floor" && collision.gameObject.tag == "sphere1")
+        else
         {
-            collision.gameObject.GetComponent<Renderer>().material.color = Color.red;
             gameObject.GetComponent<Renderer>().material.color = Color.red;
-        };
-    }
+        }
+
+        if (CalcOutput(1, 1) == 1)
+        {
+            gameObject.GetComponent<Renderer>().material.color = Color.green;
+        }
+        else
+        {
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
+        }	
+	}
   ```
-В каждом условие значение test мы меняем в зависимости от того, для какой функции мы проводим тесты. В данном случаче значение test представлено для функции XOR.
 
 ## Выводы
 
