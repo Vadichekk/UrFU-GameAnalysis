@@ -53,42 +53,48 @@
 ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/empty_object.png)
 
 Вывод OR:  
-  - Проведя тесты, я выяснил, что 5 эпох для обучения персептрона достаточно, но для еще большей уверенности можно использовать 6 эпох, чтобы он безошибочно выводил правильные результаты тестов. Ниже я прикрепил скриншоты обучения персептрона на 1, 3, 5 эпохах.  
-    1 эпоха  
+  - После тестов, сделал вывод, что 5 эпох для обучения персептрона вполне достаточно, но для уверенности можно использовать 6 эпох, чтобы он безошибочно выводил правильные результаты тестов. Ниже представлены скриншоты обучения персептрона на 1, 5 эпохах.  
+
+    1 эпоха
+      
     ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/1epochOR.png)  
-    3 эпохи  
-    ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/3epochOR.png)  
-    5 эпох  
+
+    5 эпох
+      
     ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/5epochOR.png)  
   
 Вывод AND:  
-  - Проведя тесты, я выяснил, что 8 и более эпох, для обучения персептрона вполне достаточно, чтобы он безошибочно выводил правильные результаты тестов. Ниже я прикрепил скриншоты обучения персептрона на 1, 3, 8 эпохах.     
-    1 эпоха   
+  - После тестов, сделал вывод, что 8 и более эпох, для обучения персептрона вполне достаточно, чтобы он безошибочно выводил правильные результаты тестов. Ниже представлены скриншоты обучения персептрона на 1, 8 эпохах.     
+
+    1 эпоха
+       
     ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/1epochAND.png)  
-    3 эпохи  
-    ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/3epochAND.png)  
-    8 эпох: но иногда выдается неоднозначный результат, то есть 10+ эпох будут выдавать правильные результаты с большей вероятностью
+
+    8 эпох: но иногда выдается неоднозначный результат, то есть больше 10 эпох будут выдавать правильные результаты с большей вероятностью
+    
     ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/8epochAND.png)  
   
 Вывод NAND:  
-  - Проведя тесты, я выяснил, что 8 и более эпох для обучения персептрона достаточно, чтобы он безошибочно выводил правильные результаты тестов. Ниже я прикрепил скриншоты обучения персептрона на 1, 4, 6, 8 эпохах.  
-    1 эпоха    
+  - После тестов, сделал вывод, что 8 и более эпох для обучения персептрона достаточно, чтобы он безошибочно выводил правильные результаты тестов. Ниже представлены скриншоты обучения персептрона на 1, 8 эпохах.  
+
+    1 эпоха
+       
     ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/1epochNAND.png)  
-    4 эпохи  
-    ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/4epochNAND.png)  
-    6 эпох: неоднозначный результат, требуется больше эпох    
-    ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/6epochNAND.png)  
-    8 эпох  
+
+    8 эпох
+    
     ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/8epochNAND.png)   
   
 Вывод XOR:  
- - Проведя тесты, я выяснил, что сколько бы эпох мы не ставили, он не будет выводит правильные результаты тестов, потому что XOR - это не линейная функция, а персептрон работает только с линейными. Ниже я прикрепил скриншоты обучения персептрона на 1, 4, 8 эпохах. Если запускать несколько раз, то можно заметить TOTAL ERROR либо максимальный после первой эпохи, либо увеличивается после каждой эпохи.  
-    1 эпоха    
-    ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/1epochXOR.png)  
-    4 эпохи   
-    ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/4epochXOR.png)  
+ - После тестов, сделал вывод, что сколько бы эпох мы не проводили, он не выводит правильные результаты тестов, потому что XOR - это не линейная функция, а персептрон работает только с линейными. Ниже представлены скриншоты обучения персептрона на 1, 8 эпохах. Если запускать несколько раз, то можно заметить TOTAL ERROR либо максимальный после первой эпохи, либо увеличивается после каждой эпохи.  
+
+   1 эпоха    
+
+   ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/1epochXOR.png)  
+
     8 эпох:    
-    ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/8epochXOR.png)  
+
+   ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/8epochXOR.png)  
   
 ## Задание 2
 ### Построить графики зависимости количества эпох от ошибки  обучения. Указать от чего зависит необходимое количество эпох обучения.
@@ -96,7 +102,7 @@
 и персептрон заканчивал свое обучение.  
   
 Ссылка на таблицу   https://docs.google.com/spreadsheets/d/1NkxHI_CfUrCAs_nFhNSSOnMNH0bhel2zXnRblwwoRsY/edit#gid=0  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop4/epoch_gtable.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб4.1.png)
 Вывод:
 - TOTAL ERROR(XOR) среднее с каждой эпохой увеличивается, достигает максимальной ошибки обучения и не меняется
 - TOTAL ERROR(NAND) среднее c каждой эпохой уменьшается и достигиает значения 0 примерно к 9 эпохе. То есть персептрону будет достаточно обучения на 9 и более эпох, чтобы он уверенно выводил правильнык результаты.
