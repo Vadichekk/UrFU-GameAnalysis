@@ -38,74 +38,16 @@
 ## Цель работы
 - Познакомиться с программными средствами для создания системы машинного обучения и ее интеграции в Unity
 
-##Практическое задание 1
-### Реализовать систему машинного обучения в связке Python - Google-Sheets – Unity
-
-Ход работы:
-- Создайте новый пустой 3D проект на Unity и добавим туда папку с ML агентом, которая дана в задание  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/empty-project.png)  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/add-mlAgent.png)
-- Запустим Anaconda Prompt и настроим наше окружение для ML агента. Сначала создадим ml-агента и скачаем библиотеки mlagents 0.28.0 и torch 1.7.1    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/pip-mlagents.png)    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/install-mlagents.png)      
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/install-torch.png)  
-- Заходим обратно в Unity и создадим плоскость, куб и сферу. Также создадим C# срипт-файл и подключим к сфере. В сам скрипт скопируем код, предложенный в задание
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/step6.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/step7.png)
--К сфере также добавим необходимые компоненты Rigidbody, Decision Requester, Behavior Parameters и настроим их так, как показано в примере
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/step-8.png)
-- В корень проекта также добавим файл конфигурации нейронной сети и запустим работу ml-агента
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/file-ml-rollerBall.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/step9.png)  
-- Создадим теперь 1,3,9,27 таких площадок-копий понаблюдаем за результатами обучения модели  
-1:      
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/1-train.gif)   
-3:    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/3-train.gif)  
-9:    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/9-train.gif)  
-27:    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/27-train.gif)
-
-Результат обучения:  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/result.gif)  
-
-Выводы:
-- Проанализировав и понаблюдав за ходом обучения модели на разном количестве копий-площадок, я могу сделать вывод о том, что чем больше этих копий тем больше вариантов может рассмотреть модель за единицу времени, а значит скорость обучения будет выше и результат будет получен быстрее. Но всех случаях модель обучается провально, вопрос лишь сколько времени требуется для 1,3,9,27 копий.
-
-## Практическое задание 2
-### Реализовать симулятор добычи ресурсов
-- Скачаем Unity ML-Agent_EconomicModel и запустим проект в Unity  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step1.png)       
-- Изучим проект. Как видим тут такие же компоменты наложены на сферу как и Практическом заднии 1 + добавились новые скрипты для передвижения  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step11.png)  
-- Создадим нового ml-агента и его виртуальное пространство
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step2.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step3.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step4.png)
-- Запустим и посмотрим процесс обучения на одной TargetAreaEconomic    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step5.png)
-- Запустим и посмотрим процесс обучения на 32 TargetAreaEconomic  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step6.png)
-- Посмотрии в консоли результаты обучения, которые сохраняются в файле results
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step7.png)
-Выводы: каждые 20000 шагов происходит удачная итерация,а на 110000 и 115000 итерация удачная, но Mean Rewards = -1.000   
-- Установим tenserflow
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step8.png)
-- Создадим графики на локальном сервере с помощью специальной команды и посмотрим на них
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step9.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step10.png)
-
 ## Задание 1
 ### Найдите внутри C# скрипта “коэффициент корреляции ” и сделать выводы о том, как он влияет на обучение модели.  
 Коэффицент корреляции в C# скрипте  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step12.png)  
+![Image alt]()  
 - при коэффиценте корреляции равным 1.42, причем идеальным, так как средня награда всегда равна 1.000 и стандартное отклонение всегда равно 0, а эло начинается с 1200+ и увеличивается буквально на 0.032 эло примерно    
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step7.png)  
+![Image alt]()  
 - при коэффиценте корреляции равным 5.0, средня награда всегда в диапазоне 0.75+ и до 1.0 и в среднем стандартное отклонение равно 0.512, а эло начинается около 1200 и немного уменьшается, но не слишком быстро  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step14.png)  
+![Image alt]()  
 - при коэффиценте корреляции равным 10.0,средня награда уже значительно меньше, может быть равна 0.188(мин. зн.) и в среднем стандартное отклонение равно 0.8546, а эло начинается около 1200, также уменьшается, но немного быстрее   
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step13.png)
+![Image alt]()
 Вывод: коэффицент корреляции отвечает за точность обучения, также чем он меньше, тем дольше происходит обучение  
 
 ## Задание 2  
