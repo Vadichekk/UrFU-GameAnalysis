@@ -42,64 +42,49 @@
 ### Найдите внутри C# скрипта “коэффициент корреляции ” и сделать выводы о том, как он влияет на обучение модели.  
 Коэффицент корреляции в C# скрипте 
 
-![Image alt]()  
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.1.png)  
 
 - при коэффиценте корреляции равным 5.0, средня награда всегда в диапазоне 0.75+ и до 1.0 и в среднем стандартное отклонение равно 0.512, а эло начинается около 1200 и немного уменьшается, но не слишком быстро
   
-![Image alt]()  
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.2.png)  
 
 Вывод: коэффицент корреляции отвечает за точность обучения, также чем он меньше, тем дольше происходит обучение  
 
 ## Задание 2  
 ### Изменить параметры файла yaml-агента и определить какие параметры и как влияют на обучение модели. Привести описание не менее трех параметров.  
 Стартовые настройки:  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step30.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step31.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step32.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.2.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.3.png)
+![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.4.png)
 - network_settings:  
   - normalize: Показывает, нужно ли нормализировать входные данные.(true, false)  
   normalize = true  
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step33.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step34.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step35.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.11.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.12.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.13.png)
   Вывод:
     - Скачет ошибка обучения, которая в процессе,конечно, уменьшается. Дополнительные вознаграждения(Extrinsic Rewards) сначала растут, достигают максимума и уменьшаются. Оценка внешней ценности (Extrinsic value estimate) стабильны, но на низком уровне в сравнение со стартовыми настройками, где ценность повышается со временем. Энтропия(Entropy) стабильно растет.
     
-  - hidden_units: (по умолчанию = 128) Количество узлов в скрытых слоях нейронной сети. То есть каждый скрытый слой нейронной сети имеет такое количество узлов. Если задача простая. то необходимости в большем количестве узлов в каждом слое нейронной сети не требуется.(32 - 512)  
-   hidden_units = 32  
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step36.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step37.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step38.png)
-   hidden_units = 512    
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step48.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step49.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step50.png)  
+  - hidden_units: (по умолчанию = 128) Количество узлов в скрытых слоях нейронной сети. То есть каждый скрытый слой нейронной сети имеет такое количество узлов. Если задача простая. то необходимости в большем количестве узлов в каждом слое нейронной сети не требуется.(64 - 256)  
+   hidden_units = 64  
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.5.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.6.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.7.png)
+   hidden_units = 256    
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.8.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.9.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.10.png)  
   Вывод:
-    - В связи с тем, что узлов в каждом скрытом слое 32, уменьшилось время обучения, но и точность обучения из-за этого тоже страдает. Очень сильно скачет ошибка обучения (Value Loss), очень не стабильно. В остальном графики +- одинаковы. Но при 512 узлов в скрытом слое существенно увеличивается время обучения. На 20000 мы имеем Mean Rewards = -1.  Оценка внешней ценности (Extrinsic value estimate) начинает уменьшатьсяс 20000 в отличие от hidden_units = 32. (Extrinsic Rewards) растут экспотенциально.  
+    - В связи с тем, что узлов в каждом скрытом слое 64, уменьшилось время обучения, но и точность обучения из-за этого тоже страдает. Очень сильно скачет ошибка обучения (Value Loss), очень не стабильно. В остальном графики +- одинаковы. Но при 256 узлов в скрытом слое существенно увеличивается время обучения. На 20000 мы имеем Mean Rewards = -1.  Оценка внешней ценности (Extrinsic value estimate) начинает уменьшатьсяс 20000 в отличие от hidden_units = 64. (Extrinsic Rewards) растут экспотенциально.  
             
-  - num_layers: (по умолчанию = 2) Количество скрытых слоев в нейронной сети. Для простых задач нет необходимости большого количества скрытых слоев - это может быть неэффективно и долго по времени.(1-3)  
-  num_layers = 1  
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step39.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step40.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step41.png)
-  num_layers = 3    
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step51.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step52.png)
-  ![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step53.png)  
+ - learning_rate: начальная скорость обучения для градиентного спуска. Как правило, этот показатель следует уменьшить, если обучение нестабильно, а вознаграждение постоянно не увеличивается.  
+learning_rate = 0.0001
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.14.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.15.png)
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.16.png)
+
   Вывод:
     - Так как всего один скрытый слой, то в начале ошибка обучения будет максимальной, но в процессе обучения ошибка будет стремится к 0. Время обучения тоже немного сократилось. Точность чуть пострадала,  что на 20000 шаге мы получаем mean rewards < 0. Дополнительные вознаграждения (Extrinsic Rewards) растут экспотенциально. В остальном графики +- похожи. При num_layers = 3 существенно возрастает время обучения, std в среднем выше чем при num_layers = 1. Дополнительные вознаграждения (Extrinsic Rewards) не стабильны.
-        
-- learning_rate: начальная скорость обучения для градиентного спуска. Как правило, этот показатель следует уменьшить, если обучение нестабильно, а вознаграждение постоянно не увеличивается.  
-learning_rate = 0.0001  
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step42.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step43.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step44.png)
-learning_rate = 1
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step45.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step46.png)
-![Image alt](https://github.com/prepref/UrFU-GameAnalysis/raw/main/github-screenshots/workshop5/2-step47.png)  
-Вывод:
-  - Как мы видим, если мы скорость обучения (Learning Rate, Value Loss ) уменьшим просто в 3 раза, ничего особо не поменяется, но если мы зададим значение равное одному, то можем увидить, как существенно сократилось время обучения. Также можно заметить, что в стартовых настройках энтропия (Entropy) +- держится на одном уровне, а тут она сначала возрастает и только потом стабилизируется. Дополнительные вознаграждения(Extrinsic Rewards) тут тоже со не очень стабильно в сравнение со стартовыми настройками.
   
 ## Задание 3
 ### Приведите примеры, для каких игровых задачи и ситуаций могут использоваться примеры 1 и 2 с ML-Agent’ом. В каких случаях проще использовать ML-агент, а не писать программную реализацию решения?  
