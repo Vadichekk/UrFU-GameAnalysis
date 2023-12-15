@@ -52,39 +52,59 @@
 
 ## Задание 2  
 ### Изменить параметры файла yaml-агента и определить какие параметры и как влияют на обучение модели. Привести описание не менее трех параметров.  
-Стартовые настройки:  
+Настройки по умолчанию:  
+
 ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.2.png)
+
 ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.3.png)
+
 ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.4.png)
+
 - network_settings:  
-  - normalize: Показывает, нужно ли нормализировать входные данные.(true, false)  
-  normalize = true  
+  - normalize: Нужно ли нормализировать входные данные. (true, false)  
+  normalize = true
+
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.11.png)
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.12.png)
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.13.png)
+  
   Вывод:
-    - Скачет ошибка обучения, которая в процессе,конечно, уменьшается. Дополнительные вознаграждения(Extrinsic Rewards) сначала растут, достигают максимума и уменьшаются. Оценка внешней ценности (Extrinsic value estimate) стабильны, но на низком уровне в сравнение со стартовыми настройками, где ценность повышается со временем. Энтропия(Entropy) стабильно растет.
+    - Появляется ошибка обучения, которая в процессе, стремится к нулю. Дополнительные вознаграждения (Extrinsic Rewards) в начале растут, достигают максимума и уменьшаются. Оценка внешней ценности (Extrinsic value estimate) стабильно одинаковые данные, но с низкими показателями в сравнение со стартовыми настройками, где ценность со временем повышается. Энтропия(Entropy) стабильно растет.
     
-  - hidden_units: (по умолчанию = 128) Количество узлов в скрытых слоях нейронной сети. То есть каждый скрытый слой нейронной сети имеет такое количество узлов. Если задача простая. то необходимости в большем количестве узлов в каждом слое нейронной сети не требуется.(64 - 256)  
-   hidden_units = 64  
+  - hidden_units: (по умолчанию = 128) Количество узлов в скрытых слоях нейронной сети. То есть каждый скрытый слой нейронной сети имеет данное количество узлов. Если задача простая, то необходимости в большем количестве узлов в каждом слое нейронной сети не требуется.(64 - 256)
+      
+   hidden_units = 64
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.5.png)
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.6.png)
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.7.png)
-   hidden_units = 256    
+  
+   hidden_units = 256
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.8.png)
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.9.png)
-  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.10.png)  
+  
+  ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.10.png)
+  
   Вывод:
-    - В связи с тем, что узлов в каждом скрытом слое 64, уменьшилось время обучения, но и точность обучения из-за этого тоже страдает. Очень сильно скачет ошибка обучения (Value Loss), очень не стабильно. В остальном графики +- одинаковы. Но при 256 узлов в скрытом слое существенно увеличивается время обучения. На 20000 мы имеем Mean Rewards = -1.  Оценка внешней ценности (Extrinsic value estimate) начинает уменьшатьсяс 20000 в отличие от hidden_units = 64. (Extrinsic Rewards) растут экспотенциально.  
+    - В связи с тем, что узлов в каждом скрытом слое 64, время обучения уменьшается, но точность обучения из-за этого страдает. Очень сильно вылетает ошибка обучения (Value Loss), сильно не стабильно. Графики почти одинаковы. Но при 256 узлов в скрытом слое время обучения сильно увеличивается. На 20000 мы имеем Mean Rewards = -1.  Оценка внешней ценности (Extrinsic value estimate) начинает уменьшатьсяс 20000 в отличие от hidden_units = 64. (Extrinsic Rewards) растут экспотенциально.  
             
  - learning_rate: начальная скорость обучения для градиентного спуска. Как правило, этот показатель следует уменьшить, если обучение нестабильно, а вознаграждение постоянно не увеличивается.  
-learning_rate = 0.0001
+learning_rate = 0.03
+
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.14.png)
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.15.png)
+  
   ![Image alt](https://github.com/Vadichekk/UrFU-GameAnalysis/blob/main/github-screenshots/лаб5.16.png)
 
   Вывод:
-    - Так как всего один скрытый слой, то в начале ошибка обучения будет максимальной, но в процессе обучения ошибка будет стремится к 0. Время обучения тоже немного сократилось. Точность чуть пострадала,  что на 20000 шаге мы получаем mean rewards < 0. Дополнительные вознаграждения (Extrinsic Rewards) растут экспотенциально. В остальном графики +- похожи. При num_layers = 3 существенно возрастает время обучения, std в среднем выше чем при num_layers = 1. Дополнительные вознаграждения (Extrinsic Rewards) не стабильны.
+    - Так как всего один скрытый слой, то в начале ошибка обучения будет максимальной, процессе обучения ошибка будет уменьшаться. Время обучения не сильно сократилось. Точность немного уменьшилась,  что на 20000 шаге мы получаем mean rewards < 0. Дополнительные вознаграждения (Extrinsic Rewards) растут экспотенциально. Дополнительные вознаграждения (Extrinsic Rewards) не стабильны.
   
 ## Задание 3
 ### Приведите примеры, для каких игровых задачи и ситуаций могут использоваться примеры 1 и 2 с ML-Agent’ом. В каких случаях проще использовать ML-агент, а не писать программную реализацию решения?  
